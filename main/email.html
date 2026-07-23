@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CARZ24 - Exclusive Car Offers</title>
+	<style type="text/css">* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f3f6fa;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172b4d;
+}
+
+.email-wrapper {
+    width: 100%;
+    padding: 30px 15px;
+}
+
+.email-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+}
+
+.header {
+    text-align: center;
+    padding: 28px 20px;
+    background: white;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.car-logo {
+    width: 270px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.brand-name {
+    margin: 8px 0 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #123d83;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    margin: 5px 0 0;
+    color: #f58220;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 30px;
+    background: linear-gradient(135deg, #f3f8ff, #ffffff);
+}
+
+.hero h1 {
+    margin: 0 0 15px;
+    font-size: 32px;
+    color: #123d83;
+}
+
+.hero p {
+    margin: 0 auto;
+    max-width: 560px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #667085;
+}
+
+.offer-banner {
+    margin: 25px 30px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #123d83, #1d63bd);
+    color: white;
+}
+
+.offer-banner h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+.offer-banner p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.cars-section {
+    padding: 10px 30px 30px;
+}
+
+.section-title {
+    text-align: center;
+    color: #123d83;
+    font-size: 25px;
+    margin: 20px 0 25px;
+}
+
+.car-card {
+    border: 1px solid #e2e7ef;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 20px;
+    background: #ffffff;
+}
+
+.car-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.car-info {
+    flex: 1;
+}
+
+.car-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #172b4d;
+}
+
+.car-details {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.car-offer {
+    text-align: right;
+    min-width: 160px;
+}
+
+.discount {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background: #fff0e6;
+    color: #e86b00;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 23px;
+    font-weight: bold;
+    color: #123d83;
+}
+
+.old-price {
+    color: #999999;
+    text-decoration: line-through;
+    font-size: 13px;
+    margin: 4px 0 12px;
+}
+
+/* ORANGE BUTTONS */
+.view-button {
+    display: inline-block;
+    padding: 10px 17px;
+    border-radius: 6px;
+    background: #f58220;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.why-section {
+    padding: 35px 25px;
+    text-align: center;
+    background: #f7f9fc;
+}
+
+.why-section h2 {
+    margin-top: 0;
+    color: #123d83;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.benefit {
+    flex: 1;
+}
+
+.benefit-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.benefit strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.benefit span {
+    color: #667085;
+    font-size: 12px;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 40px 25px;
+}
+
+.cta-section h2 {
+    color: #123d83;
+    margin-top: 0;
+}
+
+.cta-section p {
+    color: #667085;
+}
+
+/* MAIN ORANGE BUTTON */
+.main-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    background: #f58220;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #123d83;
+    color: white;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer a {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+
+    .email-wrapper {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .car-content {
+        flex-direction: column;
+    }
+
+    .car-offer {
+        text-align: left;
+    }
+
+    .benefits {
+        flex-direction: column;
+    }
+
+    .car-logo {
+        width: 220px;
+    }
+}
+	</style>
+</head>
+<body>
+<div class="email-wrapper">
+<div class="email-container"><!-- HEADER -->
+<div class="header"><svg class="car-logo" viewbox="0 0 600 260" xmlns="http://www.w3.org/2000/svg"> <path d="M80 165
+C110 105 170 70 250 70
+L350 70
+C410 70 455 105 485 145
+L535 160
+C550 165 555 180 545 190
+L515 190
+C510 155 480 135 445 135
+C410 135 380 155 375 190
+L225 190
+C220 155 190 135 155 135
+C120 135 90 155 85 190
+L55 190
+C40 190 35 175 45 165
+Z" fill="#123d83"> </path> <path d="M145 110
+C180 78 225 60 285 60
+L350 60
+C385 60 415 75 440 105
+Z" fill="#f58220"> </path> <path d="M180 105
+L230 75
+L275 75
+L275 105
+Z" fill="#ffffff" opacity="0.9"> </path> <path d="M290 75
+L350 75
+C375 75 395 85 410 105
+L290 105
+Z" fill="#ffffff" opacity="0.9"> </path> <circle cx="155" cy="190" fill="#ffffff" r="30" stroke="#123d83" stroke-width="14"> </circle> <circle cx="445" cy="190" fill="#ffffff" r="30" stroke="#123d83" stroke-width="14"> </circle> </svg>
+<div class="brand-name">CARZ24</div>
+
+<div class="tagline">YOUR TRUSTED USED CAR PLATFORM</div>
+</div>
+<!-- HERO -->
+
+<div class="hero">
+<h1>Find Your Perfect Car Today 🚗</h1>
+
+<p>Hello Rahul! 👋<br />
+<br />
+Your next car could be closer than you think. Explore quality used cars, amazing deals, and exclusive offers available on CARZ24.</p>
+</div>
+<!-- OFFER -->
+
+<div class="offer-banner">
+<h2>🔥 Exclusive Offers Just For You!</h2>
+
+<p>Save up to ₹75,000 on selected pre-owned cars. Limited-time deals available now.</p>
+</div>
+<!-- CARS -->
+
+<div class="cars-section">
+<h2 class="section-title">🚘 Cars You May Like</h2>
+<!-- CAR 1 -->
+
+<div class="car-card">
+<div class="car-content">
+<div class="car-info">
+<div class="car-name">2022 Hyundai Creta SX</div>
+
+<div class="car-details">📅 2022 &nbsp; | &nbsp; 🛣️ 28,500 km &nbsp; | &nbsp; ⛽ Petrol<br />
+Automatic &bull; 1st Owner &bull; Excellent Condition</div>
+</div>
+
+<div class="car-offer">
+<div class="discount">SAVE ₹55,000</div>
+
+<div class="price">₹12,45,000</div>
+
+<div class="old-price">₹13,00,000</div>
+<!-- WORKING GOPHISH LINK --><a class="view-button" href="{{.URL}}">View Car </a></div>
+</div>
+</div>
+<!-- CAR 2 -->
+
+<div class="car-card">
+<div class="car-content">
+<div class="car-info">
+<div class="car-name">2021 Maruti Suzuki Swift ZXI</div>
+
+<div class="car-details">📅 2021 &nbsp; | &nbsp; 🛣️ 35,200 km &nbsp; | &nbsp; ⛽ Petrol<br />
+Manual &bull; 1st Owner &bull; Certified Vehicle</div>
+</div>
+
+<div class="car-offer">
+<div class="discount">SAVE ₹35,000</div>
+
+<div class="price">₹6,85,000</div>
+
+<div class="old-price">₹7,20,000</div>
+<!-- WORKING GOPHISH LINK --><a class="view-button" href="{{.URL}}">View Car </a></div>
+</div>
+</div>
+<!-- CAR 3 -->
+
+<div class="car-card">
+<div class="car-content">
+<div class="car-info">
+<div class="car-name">2023 Tata Nexon XZ+</div>
+
+<div class="car-details">📅 2023 &nbsp; | &nbsp; 🛣️ 18,900 km &nbsp; | &nbsp; ⛽ Petrol<br />
+Automatic &bull; 1st Owner &bull; Like New</div>
+</div>
+
+<div class="car-offer">
+<div class="discount">SAVE ₹75,000</div>
+
+<div class="price">₹9,25,000</div>
+
+<div class="old-price">₹10,00,000</div>
+<!-- WORKING GOPHISH LINK --><a class="view-button" href="{{.URL}}">View Car </a></div>
+</div>
+</div>
+</div>
+<!-- BENEFITS -->
+
+<div class="why-section">
+<h2>Why Buy From CARZ24?</h2>
+
+<div class="benefits">
+<div class="benefit">
+<div class="benefit-icon">🔍</div>
+<strong>Verified Cars </strong> <span> Thoroughly inspected vehicles </span></div>
+
+<div class="benefit">
+<div class="benefit-icon">💰</div>
+<strong>Best Prices </strong> <span> Transparent and fair pricing </span></div>
+
+<div class="benefit">
+<div class="benefit-icon">🛡️</div>
+<strong>Trusted Service </strong> <span> A simple and secure buying experience </span></div>
+</div>
+</div>
+<!-- MAIN CTA -->
+
+<div class="cta-section">
+<h2>Ready to Find Your Next Car?</h2>
+
+<p>Browse our latest inventory and discover a car that fits your lifestyle and budget.</p>
+<!-- WORKING GOPHISH LINK --><a class="main-button" href="{{.URL}}">Explore All Cars 🚗 </a></div>
+<!-- FOOTER -->
+
+<div class="footer"><strong>CARZ24 </strong><br />
+Your Trusted Used Car Platform<br />
+<br />
+&copy; 2026 CARZ24. All rights reserved.<br />
+<a href="{{.URL}}">Contact Us </a></div>
+</div>
+</div>
+
+<p>{{.Tracker}}</p>
+
+<p>&gt;</p>
+</body>
+</html>

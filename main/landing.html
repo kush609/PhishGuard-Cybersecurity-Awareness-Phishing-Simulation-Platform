@@ -1,0 +1,498 @@
+<!DOCTYPE html><html lang="en"><head>
+</head>
+<body>
+<p>```html</p>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Account Verification | Security Awareness Simulation</title>
+<style type="text/css">* {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f5f7fb,
+                    #eef2f7
+                );
+
+            color: #202124;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 470px;
+        }
+
+        .simulation-header {
+            background: #fff4ce;
+
+            border: 1px solid #ecd477;
+
+            color: #6d5700;
+
+            padding: 13px 16px;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+            text-align: center;
+
+            margin-bottom: 18px;
+        }
+
+        .card {
+            background: white;
+
+            border: 1px solid #dadce0;
+
+            border-radius: 16px;
+
+            padding: 38px 38px 34px;
+
+            box-shadow:
+                0 8px 30px rgba(60, 64, 67, 0.12);
+        }
+
+        .brand {
+            text-align: center;
+
+            font-size: 32px;
+
+            font-weight: 500;
+
+            letter-spacing: -1px;
+
+            margin-bottom: 24px;
+        }
+
+        .blue {
+            color: #4285f4;
+        }
+
+        .red {
+            color: #ea4335;
+        }
+
+        .yellow {
+            color: #fbbc05;
+        }
+
+        .green {
+            color: #34a853;
+        }
+
+        h1 {
+            text-align: center;
+
+            font-size: 24px;
+
+            font-weight: 400;
+
+            margin: 0 0 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            color: #5f6368;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 26px;
+        }
+
+        .service-box {
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            border: 1px solid #dadce0;
+
+            border-radius: 10px;
+
+            padding: 14px;
+
+            margin-bottom: 24px;
+        }
+
+        .service-icon {
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 10px;
+
+            background: #f58220;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 25px;
+
+            color: white;
+        }
+
+        .service-name {
+            font-size: 15px;
+
+            font-weight: bold;
+
+            margin-bottom: 4px;
+        }
+
+        .service-text {
+            color: #5f6368;
+
+            font-size: 13px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+
+            font-size: 13px;
+
+            color: #5f6368;
+
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #dadce0;
+
+            border-radius: 7px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        input:focus {
+            border: 2px solid #1a73e8;
+
+            padding: 13px;
+        }
+
+        .demo-warning {
+            background: #f8fafd;
+
+            border-left: 4px solid #4285f4;
+
+            border-radius: 6px;
+
+            padding: 14px 15px;
+
+            color: #5f6368;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            margin: 22px 0;
+        }
+
+        .demo-warning strong {
+            color: #3c4043;
+        }
+
+        .submit-button {
+            width: 100%;
+
+            border: none;
+
+            border-radius: 7px;
+
+            padding: 14px;
+
+            background: #1a73e8;
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #1557b0;
+        }
+
+        .cancel-button {
+            width: 100%;
+
+            margin-top: 12px;
+
+            padding: 13px;
+
+            border: 1px solid #dadce0;
+
+            border-radius: 7px;
+
+            background: white;
+
+            color: #3c4043;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .result {
+            display: none;
+
+            text-align: center;
+        }
+
+        .checkmark {
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background: #e6f4ea;
+
+            color: #188038;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 38px;
+        }
+
+        .result h2 {
+            font-size: 23px;
+
+            font-weight: 400;
+
+            margin-bottom: 12px;
+        }
+
+        .result p {
+            color: #5f6368;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        .lesson {
+            text-align: left;
+
+            background: #fff4ce;
+
+            border: 1px solid #ecd477;
+
+            border-radius: 8px;
+
+            padding: 16px;
+
+            margin-top: 20px;
+
+            color: #6d5700;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+        .official-button {
+            display: inline-block;
+
+            margin-top: 22px;
+
+            padding: 13px 20px;
+
+            background: #f58220;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+
+            color: #5f6368;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            margin-top: 18px;
+        }
+
+        @media (max-width: 520px) {
+
+            .card {
+                padding: 30px 22px;
+            }
+
+            .brand {
+                font-size: 29px;
+            }
+
+        }
+</style>
+<div class="container">
+<div class="simulation-header">Authorized Cybersecurity Awareness Simulation<br/>
+Use demo data only. Do not enter real credentials.</div>
+
+<div class="card">
+<div id="loginScreen">
+<div class="brand"><span class="blue">G</span> <span class="red">o</span> <span class="yellow">o</span> <span class="blue">g</span> <span class="green">l</span> <span class="red">e</span></div>
+
+<h1>Sign in to continue</h1>
+
+<div class="subtitle">Continue to access the requested service.</div>
+
+<div class="service-box">
+<div class="service-icon">🚗</div>
+
+<div>
+<div class="service-name">CARS24</div>
+
+<div class="service-text">Account verification simulation</div>
+</div>
+</div>
+<!--
+
+                GoPhish-compatible form.
+
+                The form sends only the named demo fields.
+
+                Do not add real password fields or real credentials.
+
+            -->
+
+<form action="" id="simulationForm" method="POST">
+<div class="form-group"><label for="demo_email">Demo email / participant identifier </label> <input autocomplete="off" id="demo_email" name="demo_email" placeholder="student01@example.test" required="" type="text"/></div>
+
+<div class="form-group"><label for="training_value">Training demonstration value </label> <input autocomplete="off" id="training_value" name="training_value" placeholder="Example: DEMO123" required="" type="text"/></div>
+
+<div class="demo-warning"><strong>Important: Training Data Only </strong><br/>
+<br/>
+This is an authorized cybersecurity awareness exercise.<br/>
+<br/>
+Use only synthetic demonstration values such as:<br/>
+<strong>student01@example.test</strong><br/>
+<strong>DEMO123</strong><br/>
+<br/>
+Never enter a real password or real account credentials.</div>
+<button class="submit-button" type="submit">Continue Simulation</button><button class="cancel-button" onclick="showResult()" type="button">Cancel</button></form>
+</div>
+
+<div class="result" id="resultScreen">
+<div class="checkmark">✓</div>
+
+<h2>Awareness Check Complete</h2>
+
+<p>This was a controlled cybersecurity awareness simulation.</p>
+
+<div class="lesson"><strong>What should you check before submitting information? </strong><br/>
+<br/>
+Always verify the website address and domain carefully. Be cautious when a login page opens after clicking an unexpected link.<br/>
+<br/>
+A familiar logo and professional-looking design do not prove that a website is genuine.<br/>
+<br/>
+<strong>Only synthetic training data was used in this demonstration. </strong></div>
+<a class="official-button" href="https://www.cars24.com/" rel="noopener noreferrer" target="_blank">Visit Official CARS24 Website </a></div>
+</div>
+
+<div class="footer"><strong>Cybersecurity Awareness Project </strong><br/>
+Educational simulation for authorized training purposes only.</div>
+</div>
+<script>
+
+
+    const form = document.getElementById("simulationForm");
+
+
+    const loginScreen = document.getElementById("loginScreen");
+
+
+    const resultScreen = document.getElementById("resultScreen");
+
+
+    form.addEventListener("submit", function(event) {
+
+
+        /*
+
+            The form is intentionally allowed to submit normally.
+
+            GoPhish can process the named form fields:
+
+            demo_email
+
+            training_value
+
+        */
+
+
+        // No password is collected or processed.
+
+    });
+
+
+    function showResult() {
+
+
+        loginScreen.style.display = "none";
+
+
+        resultScreen.style.display = "block";
+
+
+    }
+
+
+</script>
+
+<p>```</p>
+</body></html>
